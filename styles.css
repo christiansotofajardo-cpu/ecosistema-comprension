@@ -1,13 +1,13 @@
 :root{
-  --bg:#101c2f;
-  --surface:#14213a;
-  --card:#152646;
-  --text:#eaf1ff;
-  --muted:#c6d2ea;
-  --line:rgba(255,255,255,.12);
-  --accent:#4aa3ff;
-  --accent2:#20c997;
-  --shadow: 0 10px 30px rgba(0,0,0,.20);
+  --bg:#f4f7fb;
+  --surface:#ffffff;
+  --card:#ffffff;
+  --text:#1b2a3a;
+  --muted:#5f6f86;
+  --line:rgba(0,0,0,.08);
+  --accent:#2b7cff;
+  --accent2:#3bb9a5;
+  --shadow: 0 10px 24px rgba(0,0,0,.08);
   --radius:18px;
   --max:1100px;
 }
@@ -19,9 +19,9 @@ body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   color:var(--text);
   background:
-    radial-gradient(1200px 600px at 20% 0%, rgba(74,163,255,.08), transparent 60%),
-    radial-gradient(900px 500px at 90% 10%, rgba(32,201,151,.06), transparent 55%),
-    linear-gradient(180deg, #16233a, #101c2f 70%);
+    radial-gradient(1200px 600px at 20% 0%, rgba(43,124,255,.06), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(59,185,165,.05), transparent 55%),
+    linear-gradient(180deg, #f7faff, #eef3fa 70%);
 }
 
 a{color:inherit;text-decoration:none}
@@ -30,9 +30,11 @@ a{color:inherit;text-decoration:none}
 /* ================= HEADER ================= */
 
 .site-header{
-  position:sticky; top:0; z-index:50;
-  background:rgba(16,28,47,.75);
-  backdrop-filter: blur(12px);
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
   border-bottom:1px solid var(--line);
 }
 
@@ -56,14 +58,15 @@ a{color:inherit;text-decoration:none}
   place-items:center;
   border:1px solid var(--line);
   border-radius:12px;
-  background:rgba(255,255,255,.05);
+  background:linear-gradient(180deg, #ffffff, #f1f4fa);
   font-weight:900;
+  color:var(--accent);
 }
 
 .brand-text{
   font-size:16px;
   letter-spacing:.3px;
-  font-weight:700;
+  font-weight:800;
 }
 
 .nav{
@@ -82,14 +85,14 @@ a{color:inherit;text-decoration:none}
 }
 
 .nav a:hover{
-  background:rgba(255,255,255,.08);
+  background:rgba(43,124,255,.08);
   color:var(--text);
 }
 
 .nav-cta{
-  border:1px solid rgba(74,163,255,.45);
-  color:var(--text) !important;
-  background:linear-gradient(180deg, rgba(74,163,255,.22), rgba(74,163,255,.10));
+  border:1px solid rgba(43,124,255,.45);
+  color:#ffffff !important;
+  background:linear-gradient(180deg, rgba(43,124,255,.85), rgba(43,124,255,.65));
 }
 
 /* ================= HERO ================= */
@@ -120,7 +123,7 @@ a{color:inherit;text-decoration:none}
 .lead{
   margin:0 0 22px;
   font-size:17px;
-  color:rgba(234,241,255,.95);
+  color:rgba(27,42,58,.92);
   line-height:1.6;
 }
 
@@ -139,41 +142,27 @@ a{color:inherit;text-decoration:none}
   padding:13px 16px;
   border-radius:14px;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
+  background:linear-gradient(180deg, #ffffff, #f2f5fb);
   color:var(--text);
   font-weight:700;
   transition:.15s ease;
 }
 
 .btn:hover{
-  background:rgba(255,255,255,.10);
+  background:linear-gradient(180deg, #ffffff, #e8edf7);
 }
 
 .btn.primary{
-  border-color: rgba(74,163,255,.55);
-  background: linear-gradient(180deg, rgba(74,163,255,.28), rgba(74,163,255,.14));
-}
-
-.hero-note{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.pill{
-  font-size:12px;
-  color:rgba(234,241,255,.95);
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
-  padding:6px 12px;
-  border-radius:999px;
+  border-color: rgba(43,124,255,.45);
+  background: linear-gradient(180deg, rgba(43,124,255,.85), rgba(43,124,255,.65));
+  color:#ffffff;
 }
 
 /* ================= HERO CARD ================= */
 
 .hero-card{
   border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
+  background:linear-gradient(180deg, #ffffff, #f5f7fc);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
 }
@@ -201,7 +190,7 @@ a{color:inherit;text-decoration:none}
 }
 
 .section.alt{
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  background: linear-gradient(180deg, #f8fbff, #eef3fa);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
@@ -236,9 +225,10 @@ a{color:inherit;text-decoration:none}
 
 .card{
   border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
+  background:linear-gradient(180deg, #ffffff, #f5f7fc);
   border-radius:var(--radius);
   padding:18px;
+  box-shadow:var(--shadow);
 }
 
 .card h3{
@@ -263,7 +253,7 @@ a{color:inherit;text-decoration:none}
 
 .program-card{
   border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
+  background:linear-gradient(180deg, #ffffff, #f5f7fc);
   border-radius:var(--radius);
   padding:18px;
   box-shadow: var(--shadow);
@@ -278,8 +268,8 @@ a{color:inherit;text-decoration:none}
   width:100%;
   height:60px;
   object-fit:contain;
-  background:rgba(255,255,255,.04);
-  border:1px dashed rgba(255,255,255,.18);
+  background:#ffffff;
+  border:1px dashed rgba(0,0,0,.12);
   border-radius:14px;
   padding:10px;
 }
@@ -296,7 +286,7 @@ a{color:inherit;text-decoration:none}
 }
 
 .link{
-  color:rgba(74,163,255,.95);
+  color:var(--accent);
   font-weight:800;
 }
 
@@ -307,11 +297,11 @@ a{color:inherit;text-decoration:none}
 /* ================= PLACEHOLDERS ================= */
 
 .placeholder{
-  border:1px dashed rgba(255,255,255,.22);
+  border:1px dashed rgba(0,0,0,.18);
   border-radius:14px;
   padding:16px;
   color:var(--muted);
-  background:rgba(255,255,255,.04);
+  background:linear-gradient(180deg, #ffffff, #f5f7fc);
 }
 
 /* ================= LOGOS ================= */
@@ -332,7 +322,7 @@ a{color:inherit;text-decoration:none}
   border-radius:16px;
   padding:12px;
   border:1px solid rgba(0,0,0,.08);
-  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
 }
 
 /* ================= CONTACT ================= */
@@ -350,13 +340,15 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--line);
   border-radius:var(--radius);
   padding:18px;
-  background:rgba(255,255,255,.05);
+  background:linear-gradient(180deg, #ffffff, #f5f7fc);
+  box-shadow:var(--shadow);
 }
 
 .email{
   margin:6px 0 0;
   font-size:18px;
   font-weight:900;
+  color:var(--accent);
 }
 
 /* ================= FOOTER ================= */
@@ -364,7 +356,7 @@ a{color:inherit;text-decoration:none}
 .site-footer{
   border-top:1px solid var(--line);
   padding:22px 0;
-  color:rgba(234,241,255,.90);
+  color:rgba(27,42,58,.90);
 }
 
 .footer-inner{
